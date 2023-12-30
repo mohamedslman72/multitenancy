@@ -33,8 +33,7 @@ Generate a new application key
 
 Run the database migrations (**Set the database connection in .env before migrating**)
     
-    
-    php artisan migrate --path=database/migrations/landlord
+
     php artisan migrate
     php artisan db:seed --class=TenantsTableSeeder
     php artisan db:seed --class=UsersTableSeeder
@@ -61,7 +60,6 @@ You can now access the server at http://localhost:8000
 
   
     php artisan migrate
-    php artisan migrate --path=database/migrations/landlord
     php artisan db:seed --class=TenantsTableSeeder
     php artisan db:seed --class=UsersTableSeeder
     php artisan ui bootstrap --auth
