@@ -22,7 +22,6 @@ return new class extends Migration
             $table->index('order_id');
             $table->index('product_id');
             $table->timestamps();
-            $table->engine = "InnoDB";
         });
     }
 

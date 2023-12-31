@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Support\Facades\Artisan;
@@ -12,18 +13,22 @@ class CustomTenantModel extends Tenant
     protected $table = 'tenants';
 
 
-    public function users() {
-        return $this->hasMany(User::class,'tenant_id');
+    public function users()
+    {
+        return $this->hasMany(User::class, 'tenant_id');
     }
 
-    public function products() {
-        return $this->hasMany(Product::class,'tenant_id');
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'tenant_id');
     }
 
-    public function orders() {
-        return $this->hasMany(Order::class,'tenant_id');
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'tenant_id');
     }
 
+    // this hash code for multi-tenancy with multi databases
 
 //    public static function booted()
 //    {

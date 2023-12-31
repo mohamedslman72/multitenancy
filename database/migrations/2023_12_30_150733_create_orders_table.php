@@ -18,12 +18,11 @@ return new class extends Migration
             $table->string('order_number',191);
             $table->decimal('total_amount',15,2);
             $table->foreign('user_id')->references('id')->on('users');
-
             $table->index('tenant_id');
             $table->index('user_id');
             $table->timestamps();
             $table->softDeletes();
-            $table->engine = "InnoDB";
+
         });
     }
 
